@@ -14,6 +14,7 @@ def test_fizzbuzz():
     assert temp.fizzbuzz(9) == 'Fizz'
     assert temp.fizzbuzz(10) == 'Buzz'
     assert temp.fizzbuzz(15) == 'FizzBuzz'
+    assert temp.fizzbuzz(30) == 'FizzBuzz'
 
 
 if __name__ == '__main__':
