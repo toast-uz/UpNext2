@@ -7,7 +7,11 @@ are made available under the terms of the MIT License:
 '''
 
 import requests
-from . import config_secret
+
+try:
+    from . import config_secret
+except ImportError:
+    import config_secret
 
 query_string = ('https://api-tokyochallenge.odpt.org/api/v4/odpt:{}.json'
                 '?acl:consumerKey={}')
@@ -30,7 +34,7 @@ def get_and_save(rdf_type):
 
 if __name__ == '__main__':
     for rdf_type in [
-            'Calender',
+            'Calendar',
             'Operator',
             'Station',
             'StationTimetable',
